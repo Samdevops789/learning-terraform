@@ -2,6 +2,6 @@ variable "test" {
   default = "hello"
 }
 
-Output "test" {
+output "test" {
   value = var.test
 }
