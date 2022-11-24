@@ -14,6 +14,6 @@ output "test1" {
 
 variable "test2" {}
 
-output "test1" {
+output "test2" {
   value = var.test2
 }
