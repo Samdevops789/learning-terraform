@@ -1,7 +1,7 @@
-terraform {
-  backend "s3" {
-    bucket = "terraform-b66"
-    key    = "modules/sample1/terraform.tfstate"
-    region = "us-east-1"
-  }
+module "test" {
+  source = "./test"
+}
+
+module "test1" {
+  source = "./test1"
 }
