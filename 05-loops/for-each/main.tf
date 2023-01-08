@@ -10,3 +10,19 @@
 //variable "sample" {
 //default = ["one", "two"]
 //}
+
+resource "aws_instance" "web" {
+  for_each      = var.sample
+  ami           = "ami-02e5183eb59de7943"
+  instance_type = each.value
+  tags = {
+    Name = each.key
+  }
+}
+
+variable "sample" {
+  default = {
+    one = "t3.micro"
+    two = "t3.medium"
+  }
+}
